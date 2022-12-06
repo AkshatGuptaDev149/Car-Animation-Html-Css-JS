@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#startORstop{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 34px;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    background-color:white;
+    color: red;
+    font-weight: 600;
+    padding: 3px 11px;
+    border-radius: 15px;
+    border: 2px solid red;
+
+    transition: all 2s ease ;
+}
+#startORstop:hover{
+    background-color: red;
+    color: white;
+}
+
+#AnimContainer{
+    height: 100vh;
+    width:  1700vw;
+    background-image: url(background.jpg);
+    background-size: contain;
+    background-repeat: repeat-x;
+    
+    /* animation: motionForward  ease 12s  1s infinite */
+}
+
+/* FrontWheel RearWheel */
+#RearWheel,#FrontWheel{
+    transform-origin: center;
+    transform-box: fill-box;
+    transform: rotate(-27deg);
+    /* animation: rotation linear 1s 1s infinite; */
+    
+}
+#body,#logo{
+    /* animation:  shake linear 0.23s 1s  infinite alternate; */
+}
+
+#carSvg{
+    height: 117px;
+    width: 310px;
+    position: absolute;
+    left: 11px;
+    top: 75vh;
+    /* animation: motionCar 12s ease 1s infinite */
+
+}
+
+
+@keyframes rotation{
+    from{
+        transform: rotate(1deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes motionForward{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-1600vw);
+    }
+} 
+@keyframes motionCar{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(1655vw);
+    }
+} 
+
+@keyframes shake {
+    0%{transform: translateY(5px);}
+    50%{transform: translateY(0);}
+    100%{transform: translateY(-5px);}
+}
