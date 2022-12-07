@@ -7,11 +7,13 @@ let RearWheel=document.getElementById('RearWheel')
 let car=document.getElementById('carSvg')
 let startBtn=document.getElementById('startORstop')
 let sound=new Audio('sound/accelerate.mp3')
-let EngSound=new Audio('sound/engine.mp3')
+
+
 
 //Handling start and stop btn
 startBtn.addEventListener('click',()=>{
-    if(startBtn.textContent=='Start'){
+    let EngSound=new Audio('sound/engine.mp3')
+    if(startBtn.textContent=='Start'){        
         EngSound.play()
         setTimeout(()=>{EngSound.pause()},2000)
         setTimeout(()=>{sound.play()},1500)
@@ -43,8 +45,7 @@ startBtn.addEventListener('click',()=>{
         car.style.removeProperty('animation')
         FrontWheel.style.removeProperty('animation')
         RearWheel.style.removeProperty('animation')
-        if(sound.paused==false){
-            sound.pause()
-        }
+        sound.pause()
+        
     }
 })

@@ -1,3 +1,8 @@
+html{
+    overflow: hidden;
+}
+
+
 body{
     margin: 0;
     padding: 0;
@@ -87,4 +92,25 @@ body{
     0%{transform: translateY(5px);}
     50%{transform: translateY(0);}
     100%{transform: translateY(-5px);}
+}
+
+
+@media all and (max-width:680px) and (min-width:425px){
+    #carSvg{
+        height: 71px;
+        width: 265px;
+    }
+    #startORstop{
+        font-size: 23px;
+    }
+}
+@media all and (max-width:425px){
+    #carSvg{
+        height: 79px;
+        width: 249px;
+        top: 81vh;
+    }
+    #startORstop{
+        font-size: 23px;
+    }
 }
